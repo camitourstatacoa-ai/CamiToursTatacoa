@@ -102,6 +102,36 @@ footer { margin-top: 64px; padding: 28px 0; border-top: 1px solid var(--line); c
 footer p { margin: 0 0 4px; }
 .flotante { position: fixed; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom, 0px)); z-index: 20; background: #1f9d55; color: #fff; font-weight: 700; text-decoration: none; padding: 14px 20px; border-radius: 999px; box-shadow: 0 8px 22px rgba(0,0,0,0.35); }
 
+.sub { font-size: 24px; font-weight: 800; letter-spacing: -0.01em; margin: 40px 0 6px; }
+.planes { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 16px; margin-top: 16px; }
+.plan { --c: var(--ceniza); background: var(--panel); border: 1px solid var(--line); border-left: 10px solid var(--c); border-radius: 6px 14px 14px 6px; padding: 22px 22px 18px; display: flex; flex-direction: column; gap: 12px; }
+.plan-xilopalos { --c: #6f7a3b; }
+.plan-museo { --c: #b07a2a; }
+.plan-express { --c: var(--ceniza); }
+.plan-pasadia { --c: var(--roca); }
+.plan-tarde { --c: #3d47a0; }
+.plan h4 { font-size: 20px; line-height: 1.2; margin: 0; }
+.plan .meta { color: var(--muted); font-size: 14px; font-weight: 600; margin: -6px 0 0; }
+.plan p { margin: 0; }
+.plan .opciones { margin-top: auto; }
+.horario { list-style: none; margin: 0; padding: 0; font-size: 15px; }
+.horario li { display: grid; grid-template-columns: 74px 1fr; gap: 10px; padding: 6px 0; border-top: 1px solid var(--line); }
+.horario li b { font-variant-numeric: tabular-nums; }
+.horario .bloque { grid-template-columns: 1fr; font-weight: 800; padding-top: 10px; border-top: 0; }
+.opcion { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding: 12px 0; border-top: 1px solid var(--line); }
+.opcion .t b { display: block; }
+.opcion .t span { color: var(--muted); font-size: 14px; }
+.opcion .der { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.opcion .precio { font-size: 22px; font-weight: 800; letter-spacing: -0.02em; }
+.btn.chico { padding: 9px 14px; font-size: 14px; }
+.btn.noche { background: var(--noche); color: #fff; }
+.sitio { background: var(--bg); border: 1px dashed var(--line); border-radius: 10px; padding: 12px 14px; font-size: 14px; }
+.sitio p { font-weight: 700; margin: 0 0 6px; }
+.sitio .l { display: flex; justify-content: space-between; gap: 10px; padding: 3px 0; }
+.sitio .tot { border-top: 1px solid var(--line); margin-top: 4px; padding-top: 7px; font-weight: 700; }
+.amanecer { margin-top: 40px; border-radius: 14px; padding: 28px; color: #fff; display: flex; gap: 20px; align-items: center; justify-content: space-between; flex-wrap: wrap; background: linear-gradient(100deg, #2a2a6b 0%, #5a3a7a 42%, #b3475a 78%, #e8a23a 100%); }
+.amanecer h3 { font-size: 24px; margin: 0 0 6px; }
+.amanecer p { margin: 0; max-width: 52ch; }
 @media (min-width: 900px) {
   .hero { display: flex; align-items: center; padding: 72px 0; background: linear-gradient(270deg, rgba(12,14,34,0.86) 0%, rgba(12,14,34,0.6) 34%, rgba(12,14,34,0) 64%), var(--hero) center / cover no-repeat; }
   .hero .wrap { width: 100%; display: flex; justify-content: flex-end; }
@@ -114,6 +144,7 @@ footer p { margin: 0 0 4px; }
   .estancias, .tarifas, .noche .cols, .info, .calc { grid-template-columns: 1fr; }
   .obs { grid-template-columns: 1fr; gap: 24px; }
   .obs-foto { min-height: 280px; background-position: center 66%; }
+  .amanecer { background: linear-gradient(180deg, #2a2a6b 0%, #5a3a7a 45%, #b3475a 80%, #e8a23a 100%); }
   .hero { padding-bottom: 200px; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
